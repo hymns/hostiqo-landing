@@ -568,6 +568,10 @@ main {
   margin-bottom: 12px;
 }
 
+.footer .copyright {
+  line-height: 1.5;
+}
+
 .footer-nav {
   display: flex;
   gap: 20px;
