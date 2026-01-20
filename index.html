@@ -373,6 +373,46 @@ sudo php artisan hostiqo:update --sudoers</code></pre>
                     setTimeout(() => $button.text('Copy'), 2000);
                 }
             });
+
+            // Cursor-following highlight effect for header section
+            const header = document.querySelector('.site-header');
+            if (header) {
+                let rafId = null;
+                let mouseX = 0;
+                let mouseY = 0;
+
+                header.addEventListener('mouseenter', function() {
+                    header.classList.add('cursor-active');
+                });
+
+                header.addEventListener('mouseleave', function() {
+                    header.classList.remove('cursor-active');
+                    if (rafId) {
+                        cancelAnimationFrame(rafId);
+                        rafId = null;
+                    }
+                });
+
+                header.addEventListener('mousemove', function(e) {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+
+                    if (!rafId) {
+                        rafId = requestAnimationFrame(updateHighlight);
+                    }
+                });
+
+                function updateHighlight() {
+                    const rect = header.getBoundingClientRect();
+                    const x = mouseX - rect.left - 300; // Center the 600px circle
+                    const y = mouseY - rect.top - 300;
+                    
+                    header.style.setProperty('--mouse-x', x + 'px');
+                    header.style.setProperty('--mouse-y', y + 'px');
+                    
+                    rafId = null;
+                }
+            }
         });
     });
     </script>

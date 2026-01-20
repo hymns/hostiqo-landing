@@ -46,6 +46,27 @@ a {
   overflow: hidden;
 }
 
+.site-header::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.08) 30%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  mix-blend-mode: screen;
+  left: var(--mouse-x, 50%);
+  top: var(--mouse-y, 50%);
+  transform: translate(0, 0);
+}
+
+.site-header.cursor-active::before {
+  opacity: 1;
+}
+
 .site-header::after {
   content: "";
   position: absolute;
