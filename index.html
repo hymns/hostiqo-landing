@@ -186,58 +186,58 @@ $ open https://hostiqo.your-domain.com</code></pre>
                     <p class="body">Explore the intuitive interface and powerful features that make server management effortless.</p>
                 </div>
                 <div class="showcase-grid">
-                    <div class="showcase-item">
-                        <img src="./assets/features/dashboard.png" alt="Dashboard Overview" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/dashboard.png">
+                        <img src="./assets/features/thumb_dashboard.png" alt="Dashboard Overview" loading="lazy" />
                         <h3>Dashboard Overview</h3>
                         <p>Monitor all your servers, websites, and services from a unified dashboard with real-time metrics.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/website-php-create.png" alt="PHP Website Creation" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/website-php-create.png">
+                        <img src="./assets/features/thumb_website-php-create.png" alt="PHP Website Creation" loading="lazy" />
                         <h3>PHP Website Management</h3>
                         <p>Create and configure PHP websites with automatic Nginx, PHP-FPM, and SSL setup in seconds.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/website-backend-create.png" alt="Backend Website Creation" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/website-backend-create.png">
+                        <img src="./assets/features/thumb_website-backend-create.png" alt="Backend Website Creation" loading="lazy" />
                         <h3>Backend Applications</h3>
                         <p>Deploy Node.js, Python, Go, and Rust applications with PM2 or Supervisor management.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/webhook-create.png" alt="Webhook Configuration" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/webhook-create.png">
+                        <img src="./assets/features/thumb_webhook-create.png" alt="Webhook Configuration" loading="lazy" />
                         <h3>Webhook Deployments</h3>
                         <p>Automate deployments with GitHub/GitLab webhooks, custom scripts, and rollback capabilities.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/database.png" alt="Database Management" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/database.png">
+                        <img src="./assets/features/thumb_database.png" alt="Database Management" loading="lazy" />
                         <h3>Multi-Database Support</h3>
                         <p>Manage MySQL, PostgreSQL, and MongoDB databases with user permissions and backups.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/server-health.png" alt="Server Health Monitoring" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/server-health.png">
+                        <img src="./assets/features/thumb_server-health.png" alt="Server Health Monitoring" loading="lazy" />
                         <h3>Server Health</h3>
                         <p>Track CPU, memory, disk usage, and network metrics with historical charts and alerts.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/service-manager.png" alt="Service Manager" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/service-manager.png">
+                        <img src="./assets/features/thumb_service-manager.png" alt="Service Manager" loading="lazy" />
                         <h3>Service Management</h3>
                         <p>Control systemd services, supervisor programs, and PM2 processes from one interface.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/firewall.png" alt="Firewall Configuration" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/firewall.png">
+                        <img src="./assets/features/thumb_firewall.png" alt="Firewall Configuration" loading="lazy" />
                         <h3>Firewall & Security</h3>
                         <p>Configure UFW firewall rules, manage SSH access, and enforce security policies.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/fail2ban.png" alt="Fail2ban Protection" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/fail2ban.png">
+                        <img src="./assets/features/thumb_fail2ban.png" alt="Fail2ban Protection" loading="lazy" />
                         <h3>Fail2ban Protection</h3>
                         <p>Automatic intrusion prevention with configurable jails and IP banning for common attacks.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/file-manager.png" alt="File Manager" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/file-manager.png">
+                        <img src="./assets/features/thumb_file-manager.png" alt="File Manager" loading="lazy" />
                         <h3>File Manager</h3>
                         <p>Browse, edit, upload, and manage server files with a built-in web-based file manager.</p>
                     </div>
-                    <div class="showcase-item">
-                        <img src="./assets/features/website.png" alt="Website List" loading="lazy" />
+                    <div class="showcase-item" data-lightbox="./assets/features/website.png">
+                        <img src="./assets/features/thumb_website.png" alt="Website List" loading="lazy" />
                         <h3>Website Overview</h3>
                         <p>View all hosted websites with status indicators, SSL info, and quick action buttons.</p>
                     </div>
@@ -441,6 +441,12 @@ sudo php artisan hostiqo:update --sudoers</code></pre>
         </footer>
     </div>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
     $(document).ready(function(){
@@ -502,6 +508,27 @@ sudo php artisan hostiqo:update --sudoers</code></pre>
                     rafId = null;
                 }
             }
+
+            // Lightbox functionality
+            $('.showcase-item[data-lightbox]').on('click', function() {
+                const fullImage = $(this).data('lightbox');
+                $('#lightbox-img').attr('src', fullImage);
+                $('#lightbox').fadeIn(300);
+            });
+
+            $('.lightbox-close, #lightbox').on('click', function() {
+                $('#lightbox').fadeOut(300);
+            });
+
+            $('#lightbox-img').on('click', function(e) {
+                e.stopPropagation();
+            });
+
+            $(document).on('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    $('#lightbox').fadeOut(300);
+                }
+            });
         });
     });
     </script>
