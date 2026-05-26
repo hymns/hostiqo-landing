@@ -912,6 +912,7 @@ footer p {
   object-fit: cover;
   display: block;
   border-bottom: 1px solid var(--border);
+  border-radius: 5px 5px 0 0;
 }
 
 .showcase-item-content {
