@@ -1,0 +1,106 @@
+# Hostiqo
+
+> Automated Server & Webhook Orchestration Platform
+
+## Overview
+
+Hostiqo is a self-hosted, open-source server management platform that automates infrastructure provisioning, webhook-driven deployments, and observability. Built with Laravel, it enables teams to launch secure, production-ready infrastructure in minutes.
+
+## Key Features
+
+### Infrastructure Automation
+- One-command installation provisioning PHP 8.2, MySQL, Redis, Supervisor, Nginx, fail2ban, Certbot
+- Automated firewall configuration with UFW
+- Multi-database support: MySQL, PostgreSQL (14-17), MongoDB (6.0-8.0)
+- Zero manual configuration required
+
+### Security-First Design
+- Enforced TLS 1.2/1.3 with HSTS and OCSP stapling
+- Rate-limited authentication
+- Hardened Nginx configurations
+- Curated sudoers policies
+- Fail2ban intrusion prevention
+
+### Webhook Deployments
+- GitHub and GitLab webhook integration
+- Automated git pulls, dependency installs, migrations
+- Asset builds and cache management
+- Laravel Horizon-ready queue workers
+- Rollback-friendly deployment metadata
+
+### Website Management
+- PHP website hosting with automatic Nginx and PHP-FPM configuration
+- Backend application support (Node.js, Python, Go, Rust)
+- PM2 and Supervisor process management
+- Automatic SSL certificate provisioning via Let's Encrypt
+- Custom domain and DNS management
+
+### Monitoring & Health
+- Real-time dashboards for CPU, memory, disk, network
+- Public /health and /ping endpoints
+- Deployment duration tracking
+- Alert system with configurable thresholds
+- Email and Slack notifications
+
+### Service Management
+- Systemd service control
+- Supervisor program management
+- PM2 process monitoring
+- PHP-FPM pool configuration
+- Firewall rule management
+
+## Technical Stack
+
+- **Framework**: Laravel (PHP)
+- **Frontend**: jQuery, Bootstrap
+- **Queue**: Redis with Supervisor workers
+- **Web Server**: Nginx with hardened configurations
+- **Database**: MySQL/MariaDB (with PostgreSQL and MongoDB support)
+- **Process Management**: Supervisor, PM2
+- **Security**: fail2ban, UFW firewall, Let's Encrypt SSL
+
+## Installation
+
+```bash
+# One-command installation
+curl -fsSL https://raw.githubusercontent.com/hymns/hostiqo/master/scripts/install.sh | sudo bash
+
+# Update sudoers and refresh
+sudo php artisan hostiqo:update --sudoers
+```
+
+## Supported Operating Systems
+
+- Ubuntu
+- Debian
+- Rocky Linux
+- AlmaLinux
+- CentOS
+- RHEL
+
+## Use Cases
+
+- **Development Teams**: Automate staging and production deployments
+- **Agencies**: Manage multiple client websites from one dashboard
+- **Startups**: Quick infrastructure setup without DevOps expertise
+- **Self-Hosters**: Full control over infrastructure and data
+
+## Key Benefits
+
+- **Self-Hosted**: Complete data sovereignty and privacy
+- **Open Source**: No vendor lock-in, full transparency
+- **Cost-Effective**: No monthly fees or per-server charges
+- **Fast Setup**: Average installation time under 20 minutes
+- **Security Focused**: Built-in hardening and best practices
+- **Automation First**: Minimize manual operations and human error
+
+## Links
+
+- Website: https://hostiqo.dev
+- GitHub: https://github.com/hymns/hostiqo
+- Documentation: Available in repository
+- Support: https://toyyibpay.com/sponsor-hostiqo
+
+## License
+
+Open source - check repository for license details
