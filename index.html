@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hostiqo – Automated Server & Webhook Orchestration</title>
-    <meta name="description" content="Hostiqo automates server provisioning, webhook-driven deployments, and observability so teams can launch secure infrastructure in minutes." />
-    <meta name="keywords" content="Hostiqo, server automation, webhook deployments, Laravel DevOps, automated provisioning, infrastructure as code" />
+    <title>Hostiqo – Self-Hosted Server Automation & Webhook Deployment Platform</title>
+    <meta name="description" content="Open-source server management platform. Automate infrastructure provisioning, webhook deployments, SSL, monitoring & security. Self-hosted with no monthly fees. Install in 15 minutes." />
+    <meta name="keywords" content="server automation, webhook deployment, self-hosted server management, Laravel DevOps, infrastructure automation, open source server panel, automated provisioning, nginx automation, SSL automation, server monitoring, fail2ban, PM2 manager, supervisor manager" />
     <link rel="canonical" href="https://hostiqo.dev/" />
-    <meta name="author" content="Hostiqo" />
-    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Muhammad Hamizi Jaminan" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#3b82f6" />
+    <link rel="manifest" href="/manifest.json" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://hostiqo.dev/" />
     <meta property="og:site_name" content="Hostiqo" />
-    <meta property="og:title" content="Hostiqo – Automated Server &amp; Webhook Orchestration" />
-    <meta property="og:description" content="Automate provisioning, secure deploys, and monitoring with Hostiqo. Ship production-ready infrastructure using a single command." />
+    <meta property="og:title" content="Hostiqo – Self-Hosted Server Automation & Webhook Deployment Platform" />
+    <meta property="og:description" content="Open-source server management. Automate infrastructure, webhooks, SSL & monitoring. Self-hosted, no monthly fees. Install in 15 minutes." />
     <meta property="og:image" content="https://hostiqo.dev/assets/images/hostiqo-social-card.png" />
     <meta property="og:image:secure_url" content="https://hostiqo.dev/assets/images/hostiqo-social-card.png" />
     <meta property="og:image:width" content="1200" />
@@ -30,39 +32,105 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@hostiqo" />
     <meta name="twitter:creator" content="@hostiqo" />
-    <meta name="twitter:title" content="Hostiqo – Automated Server &amp; Webhook Orchestration" />
-    <meta name="twitter:description" content="Automate provisioning, secure deploys, and monitoring with Hostiqo. Ship production-ready infrastructure using a single command." />
+    <meta name="twitter:title" content="Hostiqo – Self-Hosted Server Automation & Webhook Deployment Platform" />
+    <meta name="twitter:description" content="Open-source server management. Automate infrastructure, webhooks, SSL & monitoring. Self-hosted, no monthly fees. Install in 15 minutes." />
     <meta name="twitter:image" content="https://hostiqo.dev/assets/images/hostiqo-social-card.png" />
     <meta name="twitter:image:alt" content="Hostiqo automation platform preview" />
 
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "SoftwareApplication",
             "name": "Hostiqo",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Linux",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "ratingCount": "1"
+            },
             "url": "https://hostiqo.dev/",
             "logo": "https://hostiqo.dev/assets/images/hostiqo-logo-dark.svg",
+            "screenshot": "https://hostiqo.dev/assets/images/hostiqo-social-card.png",
+            "description": "Open-source server management platform that automates infrastructure provisioning, webhook deployments, SSL certificates, and monitoring. Self-hosted with no monthly fees.",
+            "featureList": [
+                "Automated server provisioning",
+                "Webhook-driven deployments",
+                "SSL certificate automation",
+                "Multi-database support",
+                "Real-time monitoring",
+                "Security hardening"
+            ],
+            "author": {
+                "@type": "Person",
+                "name": "Muhammad Hamizi Jaminan"
+            },
             "sameAs": [
                 "https://www.facebook.com/hostiqo",
                 "https://twitter.com/hostiqo",
                 "https://www.instagram.com/hostiqo",
                 "https://www.threads.net/@hostiqo",
                 "https://github.com/hymns/hostiqo"
-            ],
-            "description": "Hostiqo automates server provisioning, webhook-driven deployments, and observability for Laravel-powered teams."
+            ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Hostiqo",
+            "url": "https://hostiqo.dev/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://github.com/hymns/hostiqo/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://hostiqo.dev/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Features",
+                    "item": "https://hostiqo.dev/#features"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Install",
+                    "item": "https://hostiqo.dev/#install"
+                }
+            ]
         }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/hostiqo-logo-dark.svg" />
+    <link rel="alternate" type="application/rss+xml" title="Hostiqo Updates" href="/feed.xml" />
 </head>
 <body>
     <div class="page-shell">
         <header class="site-header">
-            <nav class="nav">
+            <nav class="nav" aria-label="Main navigation">
                 <div class="brand">
-                    <img src="./assets/images/hostiqo-logo-dark.svg" alt="Hostiqo" />
+                    <img src="./assets/images/hostiqo-logo-dark.svg" alt="Hostiqo - Server Automation Platform Logo" width="150" height="40" />
                 </div>
                 <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
                 <ul class="nav-links">
@@ -77,10 +145,10 @@
                 </div>
             </nav>
 
-            <section id="overview" class="hero">
+            <section id="overview" class="hero" aria-labelledby="hero-heading">
                 <div class="hero-copy">
                     <p class="eyebrow">Server Automation & Webhook Deployments</p>
-                    <h1>Deploy on autopilot.<br/>Secure by design.</h1>
+                    <h1 id="hero-heading">Deploy on autopilot.<br/>Secure by design.</h1>
                     <p class="lead">Hostiqo orchestrates webhooks, servers, and deployment pipelines for you. Provision infrastructure, enforce security, and roll out updates with a single command.</p>
                     <div class="hero-actions">
                         <a class="primary-btn" href="#install">Launch Installer</a>

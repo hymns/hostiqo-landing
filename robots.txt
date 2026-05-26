@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hostiqo.dev/sitemap.xml
+
+# Disallow common paths
+Disallow: /assets/
+Disallow: /.git/
+Disallow: /.DS_Store
