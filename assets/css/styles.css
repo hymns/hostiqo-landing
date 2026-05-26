@@ -877,8 +877,6 @@ footer p {
 /* Features Showcase */
 .features-showcase {
   padding: 80px clamp(18px, 6vw, 64px);
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 .showcase-grid {
